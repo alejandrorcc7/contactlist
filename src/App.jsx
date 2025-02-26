@@ -1,23 +1,30 @@
-import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import ShoppingCart from './pages/ShoppingCart'
-import Menu from './components/Menu'
-import ShoppingCartProvider from './context/ShoppingCartProvider'
-import injectContext from './store/AppContext'
+import React from "react";
+import { Provider } from "./context/CartContext";
+import { Link, Route, Routes } from "react-router-dom";
+import ContactPage from "./pages/AddContactPage";
+import AddContactPage from "./pages/AddContactPage";
+import EditContactPage from "./pages/EditPage";
 
-const App = () => {
-    return (
-        <ShoppingCartProvider>
-            <BrowserRouter>
-                <Menu />
-                <Routes>
-                    <Route path='/cart' element={<ShoppingCart />} />
-                    <Route path='/' element={<Home />} />
-                </Routes>
-            </BrowserRouter>
-        </ShoppingCartProvider>
-    )
+function App() {
+  return (
+    <Provider>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container">
+          <Link className="navbar-brand" to="/">
+            Contacts
+          </Link>
+          <Link className="btn btn-primary" to="/add-contact">
+            Agregar Contacto
+          </Link>
+        </div>
+      </nav>
+      <Routes>
+        <Route path="/" element={<ContactPage />} />
+        <Route path="/add-contact" element={<AddContactPage />} />
+        <Route path="/edit-contact/:id" element={<EditContactPage />} />
+      </Routes>
+    </Provider>
+  );
 }
 
-export default injectContext(App)
+export default App;

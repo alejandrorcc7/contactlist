@@ -1,28 +1,28 @@
-import React, { createContext, useEffect, useState } from 'react'
-import getState from './flux'
+// import React, { createContext, useEffect, useState } from 'react'
+// import getState from './flux'
 
-// creamos el contexto 
-export const Context = createContext()
+// // creamos el contexto
+// export const Context = createContext()
 
-const injectContext = (Component) => {
-    const StoreWrapper = () => {
+// const injectContext = (Component) => {
+//     const StoreWrapper = () => {
 
-        const [state, setState] = useState(getState())
+//         const [state, setState] = useState(getState())
 
-        useEffect(() => {
+//         useEffect(() => {
 
-            state.actions.getProducts()
+//             state.actions.getProducts()
 
-        }, [])
+//         }, [])
 
-        return (
-            <Context.Provider value={state}>
-                <Component />
-            </Context.Provider>
-        )
-    }
+//         return (
+//             <Context.Provider value={state}>
+//                 <Component />
+//             </Context.Provider>
+//         )
+//     }
 
-    return StoreWrapper
-}
+//     return StoreWrapper
+// }
 
-export default injectContext
+// export default injectContext
