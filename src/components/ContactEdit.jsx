@@ -1,10 +1,10 @@
 import React, { use, useContext, useEffect, useState } from "react";
-import { CartContext } from "../context/CartContext";
+import { ContactContext } from "../context/ContactContext";
 import { useNavigate, useParams } from "react-router-dom";
 
-const Edit = () => {
+const ContactEdit = () => {
   const navigate = useNavigate();
-  const { updateContact, contacts } = useContext(CartContext);
+  const { updateContact, contacts } = useContext(ContactContext);
   const { id } = useParams();
 
   const [contact, setContact] = useState({
@@ -98,4 +98,4 @@ const Edit = () => {
   );
 };
 
-export default Edit;
+export default ContactEdit;

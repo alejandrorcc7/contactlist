@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
-import { CartContext } from "../context/CartContext";
+import { ContactContext } from "../context/ContactContext";
 import { useNavigate } from "react-router-dom";
 
 const AddContact = () => {
   const navigate = useNavigate();
-  const { addContact } = useContext(CartContext);
+  const { addContact } = useContext(ContactContext);
 
   const [contact, setContact] = useState({
     name: "",
@@ -16,7 +16,7 @@ const AddContact = () => {
   const handleChange = (e) => {
     setContact({ ...contact, [e.target.name]: e.target.value });
   };
-
+  
   const handleSumbit = (e) => {
     e.preventDefault();
     if (contact.name && contact.email && contact.phone && contact.address) {

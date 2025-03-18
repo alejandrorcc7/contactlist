@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { ContactContext } from "../context/ContactContext";
 import ContactCard from "./ContactCard";
 
-const List = () => {
-  const { contacts } = useContext(CartContext);
+const ContactList = () => {
+  const { contacts } = useContext(ContactContext);
 
   return (
     <>
@@ -22,4 +22,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default ContactList;

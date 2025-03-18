@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
-import { CartContext } from "../context/CartContext";
+import {  ContactContext } from "../context/ContactContext";
 import { Link } from "react-router-dom";
 import Modal from "./Modal";
 
-const Card = ({ contact }) => {
-  const { deleteContact } = useContext(CartContext);
+const ContactCard = ({ contact }) => {
+  const { deleteContact } = useContext(ContactContext);
   const [showModal, setShowModal] = useState(false);
 
   const handleDelete = () => {
@@ -52,4 +52,4 @@ const Card = ({ contact }) => {
   );
 };
 
-export default Card;
+export default ContactCard;

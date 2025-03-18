@@ -1,10 +1,10 @@
 import React from "react";
-import Edit from "../components/Edit";
+import ContactEdit from "../components/ContactEdit";
 
 const EditContactPage = () => {
   return (
     <div>
-      <Edit />
+      <ContactEdit />
     </div>
   );
 };
