@@ -1,9 +1,9 @@
 import React from 'react'
 import { ContactProvider } from './context/ContactContext'
 import { Link, Route, Routes } from 'react-router-dom'
-import AddContactPage from './pages/AddContactPage'
-import ContactPage from './pages/ContactPage'
-import EditContactPage from './pages/EditContactPage'
+import ContactPage from './views/ContactPage'
+import AddContactPage from './views/AddContactPage'
+import EditContactPage from './views/EditContactPage'
 
 function App() {
   return (

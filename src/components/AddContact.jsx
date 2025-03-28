@@ -3,6 +3,7 @@ import { ContactContext } from "../context/ContactContext";
 import { useNavigate } from "react-router-dom";
 
 const AddContact = () => {
+
   const navigate = useNavigate();
   const { addContact } = useContext(ContactContext);
 
@@ -23,7 +24,7 @@ const AddContact = () => {
       addContact(contact);
       navigate("/");
     }
-  };
+  }
 
   return (
     <>

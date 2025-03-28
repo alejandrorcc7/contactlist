@@ -3,8 +3,8 @@ import { createContext, useState, useEffect, children } from "react";
 
 export const ContactContext = createContext();
 
-const baseUrl = "https://playground.4geeks.com/contact/agendas";
-const agendaName = "alejandrorcc7";
+const baseUrl = 'https://playground.4geeks.com/contact/agendas'
+const agendaName = 'franciscoYuster'
 const apiUrl = `${baseUrl}/${agendaName}/contacts`
 
 
